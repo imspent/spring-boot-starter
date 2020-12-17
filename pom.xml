@@ -4,15 +4,21 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.1</version>
+    </parent>
+
     <groupId>im.spent</groupId>
     <artifactId>spring-boot-starter</artifactId>
     <packaging>pom</packaging>
     <version>${spring-boot-starter.version}</version>
 
     <modules>
-        <module>spring-boot-starter-demo</module>
-        <module>spring-boot-starter-mybatis</module>
         <module>spring-boot-starter-core</module>
+        <module>spring-boot-starter-mybatis</module>
+        <module>spring-boot-starter-demo</module>
     </modules>
 
     <properties>
@@ -27,6 +33,11 @@
                 <groupId>im.spent</groupId>
                 <artifactId>spring-boot-starter-core</artifactId>
                 <version>${spring-boot-starter-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>im.spent</groupId>
+                <artifactId>spring-boot-starter-mybatis</artifactId>
+                <version>${spring-boot-starter-mybatis.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
