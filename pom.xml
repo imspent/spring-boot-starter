@@ -16,9 +16,9 @@
     <version>${spring-boot-starter.version}</version>
 
     <modules>
+        <module>spring-boot-starter-app</module>
         <module>spring-boot-starter-core</module>
         <module>spring-boot-starter-mybatis</module>
-        <module>spring-boot-starter-demo</module>
     </modules>
 
     <properties>
