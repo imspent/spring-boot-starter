@@ -80,15 +80,15 @@ public class SnowFlakeWorker {
      */
     private long lastTimestamp = -1L;
 
-    public SnowFlakeWorker(long workerId, long dataCenterId) {
-        if (workerId > maxWorkerId || workerId < 0) {
-            throw new IllegalArgumentException(String.format("worker Id can't be greater than %d or less than 0", maxWorkerId));
-        }
+    public SnowFlakeWorker(long dataCenterId, long workerId) {
         if (dataCenterId > maxDataCenterId || dataCenterId < 0) {
             throw new IllegalArgumentException(String.format("datacenter Id can't be greater than %d or less than 0", maxDataCenterId));
         }
-        this.workerId = workerId;
+        if (workerId > maxWorkerId || workerId < 0) {
+            throw new IllegalArgumentException(String.format("worker Id can't be greater than %d or less than 0", maxWorkerId));
+        }
         this.dataCenterId = dataCenterId;
+        this.workerId = workerId;
     }
 
     public synchronized long nextId() {
