@@ -18,13 +18,13 @@
     <modules>
         <module>spring-boot-starter-app</module>
         <module>spring-boot-starter-core</module>
-        <module>spring-boot-starter-mybatis</module>
+        <module>spring-boot-starter-mybatis-mysql</module>
     </modules>
 
     <properties>
         <spring-boot-starter.version>1.0-SNAPSHOT</spring-boot-starter.version>
         <spring-boot-starter-core.version>1.0-SNAPSHOT</spring-boot-starter-core.version>
-        <spring-boot-starter-mybatis.version>1.0-SNAPSHOT</spring-boot-starter-mybatis.version>
+        <spring-boot-starter-mybatis-mysql.version>1.0-SNAPSHOT</spring-boot-starter-mybatis-mysql.version>
     </properties>
 
     <dependencyManagement>
@@ -36,8 +36,8 @@
             </dependency>
             <dependency>
                 <groupId>im.spent</groupId>
-                <artifactId>spring-boot-starter-mybatis</artifactId>
-                <version>${spring-boot-starter-mybatis.version}</version>
+                <artifactId>spring-boot-starter-mybatis-mysql</artifactId>
+                <version>${spring-boot-starter-mybatis-mysql.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

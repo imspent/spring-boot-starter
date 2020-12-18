@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-starter-demo</artifactId>
+    <artifactId>spring-boot-starter-app</artifactId>
 
     <dependencies>
         <dependency>
@@ -18,7 +18,7 @@
         </dependency>
         <dependency>
             <groupId>im.spent</groupId>
-            <artifactId>spring-boot-starter-mybatis</artifactId>
+            <artifactId>spring-boot-starter-mybatis-mysql</artifactId>
         </dependency>
     </dependencies>
 
