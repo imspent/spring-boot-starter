@@ -7,7 +7,7 @@ public class ValidateUtil {
 
     public static void checkEntityValid(Validatable validatable) {
         if (!validatable.valid()) {
-            throw new DataInvalidException("数据不合法");
+            throw new DataInvalidException("0000", "数据不合法");
         }
     }
 

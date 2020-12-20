@@ -1,23 +1,12 @@
 package im.spent.core.exception;
 
-public class DataInvalidException extends RuntimeException {
+public class DataInvalidException extends CommonException {
 
-    public DataInvalidException() {
+    public DataInvalidException(String status, String message) {
+        super(status, message);
     }
 
-    public DataInvalidException(String message) {
-        super(message);
-    }
-
-    public DataInvalidException(String message, Throwable cause) {
-        super(message, cause);
-    }
-
-    public DataInvalidException(Throwable cause) {
-        super(cause);
-    }
-
-    public DataInvalidException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
+    public DataInvalidException(String status, String message, Throwable cause) {
+        super(status, message, cause);
     }
 }
