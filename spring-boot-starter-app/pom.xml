@@ -20,6 +20,10 @@
             <groupId>im.spent</groupId>
             <artifactId>spring-boot-starter-mybatis-mysql</artifactId>
         </dependency>
+        <dependency>
+            <groupId>im.spent</groupId>
+            <artifactId>spring-boot-starter-util</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
