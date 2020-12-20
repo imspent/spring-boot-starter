@@ -1,7 +1,7 @@
 package im.spent.app.transfer;
 
-import im.spent.core.spec.Validatable;
-import im.spent.util.ValidateUtil;
+import im.spent.core.validate.Validatable;
+import im.spent.core.util.ObjectUtils;
 
 public class TeacherTransfer implements Validatable {
 
@@ -50,9 +50,9 @@ public class TeacherTransfer implements Validatable {
 
     @Override
     public boolean valid() {
-        return ValidateUtil.isNotBlank(name)
-                && ValidateUtil.isNotBlank(username)
-                && ValidateUtil.isNotBlank(email)
-                && ValidateUtil.isNotNull(sex);
+        return ObjectUtils.isNotEmpty(name)
+                && ObjectUtils.isNotEmpty(username)
+                && ObjectUtils.isNotEmpty(email)
+                && ObjectUtils.isNotEmpty(sex);
     }
 }

@@ -4,7 +4,7 @@ import im.spent.app.entity.Teacher;
 import im.spent.app.mapper.TeacherMapper;
 import im.spent.app.service.TeacherService;
 import im.spent.app.transfer.TeacherTransfer;
-import im.spent.util.serial.SnowFlakeWorker;
+import im.spent.core.serial.SnowFlakeWorker;
 import org.springframework.stereotype.Service;
 
 import java.util.Calendar;

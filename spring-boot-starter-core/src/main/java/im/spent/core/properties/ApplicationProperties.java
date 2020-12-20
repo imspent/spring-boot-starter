@@ -1,9 +1,9 @@
-package im.spent.util.serial;
+package im.spent.core.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "spring.cloud")
-public class SnowFlakeProperties {
+@ConfigurationProperties(prefix = "spring.cloud.application")
+public class ApplicationProperties {
 
     private long dataCenterId;
 

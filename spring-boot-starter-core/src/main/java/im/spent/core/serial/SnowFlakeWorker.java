@@ -1,4 +1,4 @@
-package im.spent.util.serial;
+package im.spent.core.serial;
 
 /**
  * 雪花算法

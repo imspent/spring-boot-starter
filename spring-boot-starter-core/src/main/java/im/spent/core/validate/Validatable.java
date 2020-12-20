@@ -1,4 +1,4 @@
-package im.spent.core.spec;
+package im.spent.core.validate;
 
 /**
  * 数据校验接口

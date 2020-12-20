@@ -2,7 +2,7 @@ package im.spent.core.handler;
 
 import im.spent.core.exception.CommonException;
 import im.spent.core.exception.DataInvalidException;
-import im.spent.core.response.JSONResponse;
+import im.spent.core.spec.JSONResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ExceptionHandler;

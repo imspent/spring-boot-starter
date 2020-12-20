@@ -1,4 +1,4 @@
-package im.spent.core.response;
+package im.spent.core.spec;
 
 public class JSONResponse<T> {
 
