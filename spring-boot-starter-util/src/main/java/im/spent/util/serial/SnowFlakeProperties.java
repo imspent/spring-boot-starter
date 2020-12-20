@@ -2,7 +2,7 @@ package im.spent.util.serial;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "spring.snow-flake")
+@ConfigurationProperties(prefix = "spring.cloud")
 public class SnowFlakeProperties {
 
     private long dataCenterId;

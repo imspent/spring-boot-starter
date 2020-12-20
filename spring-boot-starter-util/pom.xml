@@ -20,6 +20,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
         </dependency>
+        <dependency>
+            <groupId>im.spent</groupId>
+            <artifactId>spring-boot-starter-core</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
