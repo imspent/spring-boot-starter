@@ -5,9 +5,8 @@ import im.spent.app.mapper.TeacherMapper;
 import im.spent.app.service.TeacherService;
 import im.spent.app.transfer.TeacherTransfer;
 import im.spent.core.serial.SnowFlakeWorker;
+import im.spent.core.util.TimeUtils;
 import org.springframework.stereotype.Service;
-
-import java.util.Calendar;
 
 @Service
 public class TeacherServiceImpl implements TeacherService {
@@ -29,8 +28,8 @@ public class TeacherServiceImpl implements TeacherService {
         teacher.setEmail(transfer.getEmail());
         teacher.setSex(transfer.getSex());
 
-        teacher.setCreateTime(Calendar.getInstance());
-        teacher.setUpdateTime(Calendar.getInstance());
+        teacher.setCreateTime(TimeUtils.currentDatetime());
+        teacher.setUpdateTime(TimeUtils.currentDatetime());
 
         this.teacherMapper.insert(teacher);
     }

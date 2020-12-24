@@ -1,6 +1,6 @@
 package im.spent.app.entity;
 
-import java.util.Calendar;
+import java.util.Date;
 
 public class Teacher {
 
@@ -14,9 +14,9 @@ public class Teacher {
 
     private Boolean sex;
 
-    private Calendar createTime;
+    private Date createTime;
 
-    private Calendar updateTime;
+    private Date updateTime;
 
     public Teacher() {
     }
@@ -61,19 +61,19 @@ public class Teacher {
         this.sex = sex;
     }
 
-    public Calendar getCreateTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Calendar createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
-    public Calendar getUpdateTime() {
+    public Date getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Calendar updateTime) {
+    public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 }
