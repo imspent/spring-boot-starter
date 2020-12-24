@@ -1,8 +1,9 @@
 package im.spent.core.properties;
 
+import im.spent.core.constant.ApplicationConstant;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "spring.cloud.application")
+@ConfigurationProperties(prefix = ApplicationConstant.SPRING_CLOUD_APPLICATION)
 public class ApplicationProperties {
 
     private long dataCenterId;

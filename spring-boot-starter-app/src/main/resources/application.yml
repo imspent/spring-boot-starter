@@ -4,6 +4,10 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    application:
+      data-center-id: 3
+      worker-id: 5
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
