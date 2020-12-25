@@ -22,10 +22,7 @@ public class HttpResponseBodyMethodDecorator implements HandlerMethodReturnValue
 
     @Override
     public void handleReturnValue(Object o, MethodParameter methodParameter, ModelAndViewContainer modelAndViewContainer, NativeWebRequest nativeWebRequest) throws Exception {
-        JSONResponse<Object> response = new JSONResponse<>();
-        response.setStatus(HttpResponseStatus.SUCCESS.getStatus());
-        response.setMessage(HttpResponseStatus.SUCCESS.getMessage());
-        response.setData(o);
+        JSONResponse<Object> response = JSONResponse.of(HttpResponseStatus.SUCCESS, o);
         this.processor.handleReturnValue(response, methodParameter, modelAndViewContainer, nativeWebRequest);
     }
 }

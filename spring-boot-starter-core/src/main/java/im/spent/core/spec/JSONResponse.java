@@ -1,5 +1,7 @@
 package im.spent.core.spec;
 
+import im.spent.core.status.HttpResponseStatus;
+
 public class JSONResponse<T> {
 
     private String status;
@@ -35,10 +37,11 @@ public class JSONResponse<T> {
         this.data = data;
     }
 
-    public static <T> JSONResponse<T> of(String status, String message) {
+    public static <T> JSONResponse<T> of(HttpResponseStatus responseStatus, T data) {
         JSONResponse<T> response = new JSONResponse<>();
-        response.setStatus(status);
-        response.setMessage(message);
+        response.setStatus(responseStatus.getStatus());
+        response.setMessage(responseStatus.getMessage());
+        response.setData(data);
         return response;
     }
 }
