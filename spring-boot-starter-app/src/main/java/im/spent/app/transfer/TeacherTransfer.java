@@ -1,5 +1,6 @@
 package im.spent.app.transfer;
 
+import im.spent.core.exception.DataInvalidException;
 import im.spent.core.validate.Validatable;
 import im.spent.core.util.ObjectUtils;
 
@@ -49,10 +50,15 @@ public class TeacherTransfer implements Validatable {
     }
 
     @Override
-    public boolean valid() {
-        return ObjectUtils.isNotEmpty(name)
-                && ObjectUtils.isNotEmpty(username)
-                && ObjectUtils.isNotEmpty(email)
-                && ObjectUtils.isNotEmpty(sex);
+    public void checkValid() throws DataInvalidException {
+        if (ObjectUtils.isEmpty(name)) {
+            throw new DataInvalidException("姓名不合法");
+        } else if (ObjectUtils.isEmpty(username)) {
+            throw new DataInvalidException("用户名不合法");
+        } else if (ObjectUtils.isEmpty(email)) {
+            throw new DataInvalidException("邮箱不合法");
+        } else if (ObjectUtils.isEmpty(sex)) {
+            throw new DataInvalidException("性别不合法");
+        }
     }
 }

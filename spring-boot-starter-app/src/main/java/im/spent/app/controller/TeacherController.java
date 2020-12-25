@@ -2,7 +2,6 @@ package im.spent.app.controller;
 
 import im.spent.app.service.TeacherService;
 import im.spent.app.transfer.TeacherTransfer;
-import im.spent.core.validate.Validator;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +19,7 @@ public class TeacherController {
 
     @PostMapping("create")
     public void create(@RequestBody TeacherTransfer transfer) {
-        Validator.checkValid(transfer);
+        transfer.checkValid();
         this.teacherService.save(transfer);
     }
 }

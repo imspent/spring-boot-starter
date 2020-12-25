@@ -1,9 +1,8 @@
 package im.spent.core.validate;
 
-/**
- * 数据校验接口
- */
+import im.spent.core.exception.DataInvalidException;
+
 public interface Validatable {
 
-    boolean valid();
+    void checkValid() throws DataInvalidException;
 }
