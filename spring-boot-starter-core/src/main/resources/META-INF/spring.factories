@@ -1,2 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-im.spent.core.conf.CoreAutoConfiguration
+im.spent.core.conf.ExceptionHandlerAutoConfiguration,\
+im.spent.core.conf.SerialToolAutoConfiguration
