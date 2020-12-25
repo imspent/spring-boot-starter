@@ -1,6 +1,7 @@
 package im.spent.core.conf;
 
 import im.spent.core.constant.ApplicationConstant;
+import im.spent.core.handler.GlobalExceptionHandler;
 import im.spent.core.properties.ApplicationProperties;
 import im.spent.core.serial.SnowFlakeWorker;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -11,7 +12,13 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableConfigurationProperties({ApplicationProperties.class})
-public class SerialToolAutoConfiguration {
+public class CoreAutoConfiguration {
+
+    @Bean
+    @ConditionalOnMissingBean
+    public GlobalExceptionHandler globalExceptionHandler() {
+        return new GlobalExceptionHandler();
+    }
 
     @Bean
     @ConditionalOnMissingBean
