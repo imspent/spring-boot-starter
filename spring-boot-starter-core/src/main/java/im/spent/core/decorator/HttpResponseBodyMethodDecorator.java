@@ -1,6 +1,6 @@
 package im.spent.core.decorator;
 
-import im.spent.core.spec.JSONResponse;
+import im.spent.core.common.JSONResponse;
 import im.spent.core.status.HttpResponseStatus;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.context.request.NativeWebRequest;

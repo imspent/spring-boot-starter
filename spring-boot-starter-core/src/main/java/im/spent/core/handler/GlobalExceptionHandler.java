@@ -1,7 +1,7 @@
 package im.spent.core.handler;
 
 import im.spent.core.exception.DataInvalidException;
-import im.spent.core.spec.JSONResponse;
+import im.spent.core.common.JSONResponse;
 import im.spent.core.status.HttpResponseStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

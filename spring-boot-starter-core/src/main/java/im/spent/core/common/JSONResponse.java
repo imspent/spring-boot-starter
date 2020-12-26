@@ -1,4 +1,4 @@
-package im.spent.core.spec;
+package im.spent.core.common;
 
 import im.spent.core.status.HttpResponseStatus;
 

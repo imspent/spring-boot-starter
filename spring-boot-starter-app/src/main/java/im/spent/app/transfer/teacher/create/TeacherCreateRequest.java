@@ -1,10 +1,10 @@
-package im.spent.app.transfer;
+package im.spent.app.transfer.teacher.create;
 
+import im.spent.app.entity.Teacher;
 import im.spent.core.exception.DataInvalidException;
-import im.spent.core.validate.Validatable;
-import im.spent.core.util.ObjectUtils;
+import im.spent.core.spec.HttpRequestSpec;
 
-public class TeacherTransfer implements Validatable {
+public class TeacherCreateRequest extends HttpRequestSpec<Teacher> {
 
     private String name;
 
@@ -13,9 +13,6 @@ public class TeacherTransfer implements Validatable {
     private String email;
 
     private Boolean sex;
-
-    public TeacherTransfer() {
-    }
 
     public String getName() {
         return name;
@@ -50,15 +47,16 @@ public class TeacherTransfer implements Validatable {
     }
 
     @Override
+    public Teacher convertToEntity() {
+        Teacher teacher = new Teacher();
+        teacher.setName(this.getName());
+        teacher.setUsername(this.getUsername());
+        teacher.setEmail(this.getEmail());
+        teacher.setSex(this.getSex());
+        return teacher;
+    }
+
+    @Override
     public void checkValid() throws DataInvalidException {
-        if (ObjectUtils.isEmpty(name)) {
-            throw new DataInvalidException("姓名不合法");
-        } else if (ObjectUtils.isEmpty(username)) {
-            throw new DataInvalidException("用户名不合法");
-        } else if (ObjectUtils.isEmpty(email)) {
-            throw new DataInvalidException("邮箱不合法");
-        } else if (ObjectUtils.isEmpty(sex)) {
-            throw new DataInvalidException("性别不合法");
-        }
     }
 }
