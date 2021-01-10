@@ -24,6 +24,11 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
+    public void delete(Long id) {
+        this.teacherMapper.delete(id);
+    }
+
+    @Override
     public void save(TeacherCreateRequest request) {
         Teacher teacher = request.convertToEntity();
         teacher.setId(snowFlakeWorker.nextId());

@@ -23,6 +23,11 @@ public class TeacherController {
         this.teacherService.save(request);
     }
 
+    @DeleteMapping("delete/{id}")
+    public void delete(@PathVariable Long id) {
+        this.teacherService.delete(id);
+    }
+
     @GetMapping("select")
     public List<TeacherSelectResponse> select() {
         return this.teacherService.select();

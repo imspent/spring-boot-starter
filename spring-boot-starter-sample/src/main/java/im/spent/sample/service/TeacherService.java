@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface TeacherService {
 
+    void delete(Long id);
+
     void save(TeacherCreateRequest request);
 
     List<TeacherSelectResponse> select();
