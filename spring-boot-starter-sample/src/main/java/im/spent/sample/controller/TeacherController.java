@@ -1,8 +1,8 @@
-package im.spent.app.controller;
+package im.spent.sample.controller;
 
-import im.spent.app.service.TeacherService;
-import im.spent.app.transfer.teacher.create.TeacherCreateRequest;
-import im.spent.app.transfer.teacher.select.TeacherSelectResponse;
+import im.spent.sample.service.TeacherService;
+import im.spent.sample.transfer.teacher.create.TeacherCreateRequest;
+import im.spent.sample.transfer.teacher.select.TeacherSelectResponse;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

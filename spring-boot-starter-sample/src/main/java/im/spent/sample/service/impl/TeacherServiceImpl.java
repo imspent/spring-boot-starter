@@ -1,10 +1,10 @@
-package im.spent.app.service.impl;
+package im.spent.sample.service.impl;
 
-import im.spent.app.entity.Teacher;
-import im.spent.app.mapper.TeacherMapper;
-import im.spent.app.service.TeacherService;
-import im.spent.app.transfer.teacher.create.TeacherCreateRequest;
-import im.spent.app.transfer.teacher.select.TeacherSelectResponse;
+import im.spent.sample.entity.Teacher;
+import im.spent.sample.mapper.TeacherMapper;
+import im.spent.sample.service.TeacherService;
+import im.spent.sample.transfer.teacher.create.TeacherCreateRequest;
+import im.spent.sample.transfer.teacher.select.TeacherSelectResponse;
 import im.spent.core.serial.SnowFlakeWorker;
 import im.spent.core.util.TimeUtils;
 import org.springframework.stereotype.Service;

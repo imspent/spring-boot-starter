@@ -1,12 +1,8 @@
-package im.spent.app.transfer.teacher.select;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-import im.spent.app.entity.Teacher;
-import im.spent.core.spec.HttpResponseSpec;
+package im.spent.sample.entity;
 
 import java.util.Date;
 
-public class TeacherSelectResponse extends HttpResponseSpec<Teacher> {
+public class Teacher {
 
     private Long id;
 
@@ -18,21 +14,11 @@ public class TeacherSelectResponse extends HttpResponseSpec<Teacher> {
 
     private Boolean sex;
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date updateTime;
 
-    public TeacherSelectResponse(Teacher teacher) {
-        super(teacher);
-        this.id = teacher.getId();
-        this.name = teacher.getName();
-        this.username = teacher.getUsername();
-        this.email = teacher.getEmail();
-        this.sex = teacher.getSex();
-        this.createTime = teacher.getCreateTime();
-        this.updateTime = teacher.getUpdateTime();
+    public Teacher() {
     }
 
     public Long getId() {

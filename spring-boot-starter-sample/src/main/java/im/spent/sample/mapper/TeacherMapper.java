@@ -1,6 +1,6 @@
-package im.spent.app.mapper;
+package im.spent.sample.mapper;
 
-import im.spent.app.entity.Teacher;
+import im.spent.sample.entity.Teacher;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

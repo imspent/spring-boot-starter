@@ -1,10 +1,10 @@
-package im.spent.app.entity;
+package im.spent.sample.transfer.teacher.create;
 
-import java.util.Date;
+import im.spent.sample.entity.Teacher;
+import im.spent.core.exception.DataInvalidException;
+import im.spent.core.spec.HttpRequestSpec;
 
-public class Teacher {
-
-    private Long id;
+public class TeacherCreateRequest extends HttpRequestSpec<Teacher> {
 
     private String name;
 
@@ -13,21 +13,6 @@ public class Teacher {
     private String email;
 
     private Boolean sex;
-
-    private Date createTime;
-
-    private Date updateTime;
-
-    public Teacher() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -61,19 +46,17 @@ public class Teacher {
         this.sex = sex;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    @Override
+    public Teacher convertToEntity() {
+        Teacher teacher = new Teacher();
+        teacher.setName(this.getName());
+        teacher.setUsername(this.getUsername());
+        teacher.setEmail(this.getEmail());
+        teacher.setSex(this.getSex());
+        return teacher;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+    @Override
+    public void checkValid() throws DataInvalidException {
     }
 }
