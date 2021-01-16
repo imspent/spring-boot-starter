@@ -7,6 +7,7 @@ import im.spent.sample.transfer.teacher.create.TeacherCreateRequest;
 import im.spent.sample.transfer.teacher.select.TeacherSelectResponse;
 import im.spent.core.serial.SnowFlakeWorker;
 import im.spent.core.util.TimeUtils;
+import im.spent.sample.transfer.teacher.update.TeacherUpdateRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -33,8 +34,8 @@ public class TeacherServiceImpl implements TeacherService {
         Teacher teacher = request.convertToEntity();
         teacher.setId(snowFlakeWorker.nextId());
 
-        teacher.setCreateTime(TimeUtils.currentDatetime());
-        teacher.setUpdateTime(TimeUtils.currentDatetime());
+        teacher.setCreateTime(TimeUtils.currentDateTime());
+        teacher.setUpdateTime(TimeUtils.currentDateTime());
 
         this.teacherMapper.insert(teacher);
     }
@@ -49,5 +50,13 @@ public class TeacherServiceImpl implements TeacherService {
             responses.add(response);
         }
         return responses;
+    }
+
+    @Override
+    public void update(TeacherUpdateRequest request) {
+        Teacher teacher = request.convertToEntity();
+        teacher.setUpdateTime(TimeUtils.currentDateTime());
+
+        this.teacherMapper.update(teacher);
     }
 }

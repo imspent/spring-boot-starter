@@ -3,6 +3,7 @@ package im.spent.sample.controller;
 import im.spent.sample.service.TeacherService;
 import im.spent.sample.transfer.teacher.create.TeacherCreateRequest;
 import im.spent.sample.transfer.teacher.select.TeacherSelectResponse;
+import im.spent.sample.transfer.teacher.update.TeacherUpdateRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,5 +32,11 @@ public class TeacherController {
     @GetMapping("select")
     public List<TeacherSelectResponse> select() {
         return this.teacherService.select();
+    }
+
+    @PutMapping("update")
+    public void update(@RequestBody TeacherUpdateRequest request) {
+        request.checkValid();
+        this.teacherService.update(request);
     }
 }

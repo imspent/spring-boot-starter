@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class TimeUtils {
 
-    public static Date currentDatetime() {
+    public static Date currentDateTime() {
         return new Date();
     }
 }

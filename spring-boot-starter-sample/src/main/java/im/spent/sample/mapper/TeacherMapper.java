@@ -1,10 +1,7 @@
 package im.spent.sample.mapper;
 
 import im.spent.sample.entity.Teacher;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -22,4 +19,9 @@ public interface TeacherMapper {
     @Select("SELECT id, name, username, email, sex, create_time, update_time\n" +
             "FROM teacher")
     List<Teacher> select();
+
+    @Update("UPDATE teacher\n" +
+            "SET name = #{name}, email = #{email}, sex = #{sex}, update_time = #{updateTime}\n" +
+            "WHERE id = #{id}")
+    void update(Teacher teacher);
 }
